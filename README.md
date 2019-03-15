@@ -41,4 +41,4 @@ assessVariableEqual('SampleVariable',referenceVariables.SampleVariable)
 ```
 
 
-For more information head over to the [wiki](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/tree/master/wiki/wiki.md) 
+For more information head over to the [wiki](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/blob/master/matlab-grader-test-generator.wiki/wiki.md) 
