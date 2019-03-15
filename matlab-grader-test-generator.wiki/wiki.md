@@ -127,7 +127,7 @@ If the user wish to start a new, a reset button located in the top left corner, 
 
 Note that there are also a few places in the GUI code where there are included some commented code which either stores variables to Matlab workspace and/or outputs to the command window for debugging purposes.
 
-## Example use
+## Example Use
 In order to utilize this application you are required to have two .m files, where one contains the solution and the other one the learner template. Note that the variables must appear in the same order in both files.
 
 
@@ -350,7 +350,7 @@ assessVariableEqual('areaCircle',referenceVariables.areaCircle)
 ---------- CUSTOMIZE HERE ----------
 ```
 
-## Contributions and editing
+## Contributions and License
 
 This application was developed by a student in the [Cyber-Physical Systems Laboratory](https://www.ntnu.no/blogger/cpslab/) at the [Norwegian University of Science and Technology](https://www.ntnu.no) in Ålesund, Norway, as part of an educational project funded by [Excited](https://www.ntnu.edu/excited), a Norwegian Centre for Excellent IT Education. Anyone is free to use this code as per the [MIT License](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/blob/master/LICENSE). 
 
