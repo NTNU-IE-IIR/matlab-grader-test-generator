@@ -73,7 +73,7 @@ If any other format is required, the output can easily be altered in the body of
 
 ## GUI
 
-![GUI.png](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/tree/master/wiki/app_gui.png)
+![GUI.png](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/blob/master/matlab-grader-test-generator.wiki/app_gui.png)
 
 Above is the graphical user interface of the test generator. 
 
@@ -336,7 +336,7 @@ Each of the tests can be pasted to Matlab Gader where it will perform a variable
 ### Customizing Print
 You can customize the output by entering  the 'Custom Print' tab and entering desired output.
 
-![GUI_CUSTOM.png](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/tree/master/wiki/app_custom_print.png)
+![GUI_CUSTOM.png](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/blob/master/matlab-grader-test-generator.wiki/app_custom_print.png)
 
 Below is a sample of a customized print, where the '---------- CUSTOMIZE HERE ----------' is the section which will changed. Each of the three lines can be changed separately. The structure can only be changed in the source code of the function.
 
