@@ -352,5 +352,5 @@ assessVariableEqual('areaCircle',referenceVariables.areaCircle)
 
 ## Contributions and editing
 
-This application was developed by a student as a project at the Norwegian institute of science and technology. Everyone is free to edit and use the code at their own discretion.
+This application was developed by a student in the [Cyber-Physical Systems Laboratory](https://www.ntnu.no/blogger/cpslab/) at the [Norwegian University of Science and Technology](https://www.ntnu.no) in Ålesund, Norway, as part of an educational project funded by [Excited](https://www.ntnu.edu/excited), a Norwegian Centre for Excellent IT Education. Anyone is free to use this code as per the [MIT License](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/blob/master/LICENSE). 
 
