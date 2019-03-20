@@ -1,8 +1,16 @@
-##### Table of Contents  
-[Overview](#Overview)  
-<a name="Overview"/>
+## Table of Contents  
+1.  [Overview](#overview)  
+2.  [Functions](#functions)
+      1.  [Import Variables](#importvariables)
+      2.  [Compare Structures](#comparestructures)
+      3.  [Remove Uncommon](#removeuncommon)
+      4.  [Print test](#printtest)
+3.  [GUI](#gui)
+4.  [Example use](#exampleuse)
+5.  [Customizing Print](#customizingprint)
+6.  [Contributions and License](#contributionsandlicense)
 
-## Overview
+## Overview <a name="overview"/></a>
 
 The Matlab Grader Test Generator can be packaged and run as an standalone app, however, it is more beneficial to open and run in conjunction with Matlab for development purposes. 
 
@@ -19,10 +27,10 @@ To inspect/modify the source code of the application, right click the GenGui_app
 
 A new window called app designer will open. To see the code for the application GUI there is a toggle switch in the upper right corner labeled "Design View / Code View".
 
-## Functions
+## Functions <a name="functions"/></a>
 There are four separate function files bundled with the application.  They are contained within the sub-directory named "Functions". If you want to move them, there is a single line in the application code that must be changed to specify the relative path to the functions. 
 
-### Import Variables
+### Import Variables <a name="importvariables"/></a>
 The function called "importVariables" imports variables from the workspace created by the learner and solution .mat files. 
 
 It requires minimum two inputs, and accepts a maximum of three. 
@@ -31,7 +39,7 @@ The optional on is an array cell containing variables to be excluded from testin
 It runs the two scripts, importing workspace variables with the Matlab keyword "whos". All the variables that does not require testing, or are created by the function, are excluded with
 an regular expression pattern. Finally it returns two structures containing the variable names and data from each .m file.
 
-### Compare Structures
+### Compare Structures <a name="comparestructures"/></a>
 The function "compareStructures" takes two structures as input, compares them and returns a new structure containing all elements not found in both input structures, in other words those uncommon for both.
 
 - Takes two separate structures as input
@@ -44,14 +52,14 @@ The function "compareStructures" takes two structures as input, compares them an
 
   
 
-### Remove Uncommon
+### Remove Uncommon <a name="removeuncommon"/></a>
 The function "removeUncommon" takes two separate structures as input, and returns a new structure.
 The first structure being either the student template or the solution template
 The second structure being corresponding unique structure found in the previous function ("compareStructures").
 
 It then compares the two inputs and places every element not present in both structures in a new struct. The new structure is returned, which will be a sum of the first structure minus all elements not common in both. This will ultimately be the one with all the variables common in learner and solution template, and is then used for creating tests.
 
-### Print Test
+### Print Test <a name="printtest"/></a>
 The function "printTest" takes six inputs, where the three first are mandatory and the three last are optional and only used if you enter a custom text in the test generator.
 
 - The first is the filtered structure which only contains the variables common to the learner and reference solution.
@@ -71,7 +79,7 @@ assessVariableEqual('numF1',referenceVariables.numF1)
 
 If any other format is required, the output can easily be altered in the body of the function or in the test generator GUI.
 
-## GUI
+## GUI <a name="gui"/></a>
 
 ![GUI.png](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/blob/master/matlab-grader-test-generator.wiki/app_gui.png)
 
@@ -117,7 +125,7 @@ The large field with 3 tabs contains:
   When all variables have been entered, the "submit" button must be pressed to pass the list on to the 
   importVariables function.
 
-* **Custom Print**
+* **Custom Print** 
   Allows the user to edit the output generated. Contains three text boxes where each box represents a line in the test output.
 
 Above the "Generate Tests" button there is a small text field that gives short feedback based on user action.
@@ -127,13 +135,16 @@ If the user wish to start a new, a reset button located in the top left corner, 
 
 Note that there are also a few places in the GUI code where there are included some commented code which either stores variables to Matlab workspace and/or outputs to the command window for debugging purposes.
 
-## Example Use
+## Example Use <a name="exampleuse"/></a>
 In order to utilize this application you are required to have two .m files, where one contains the solution and the other one the learner template. Note that the variables must appear in the same order in both files.
 
 
 Below are two sample scripts. 
 
 The first one is the solution template which contains the correct answer.
+
+<details><summary>Click me to see the Solution template</summary>
+<p>
 
 ```matlab
 %% Solution Template
@@ -168,8 +179,14 @@ s = 2.62;  % Distance height
 % Note that vf = 0 
 vi = sqrt(-(2*ay*s));
 ```
+</p>
+</details>
+
 The second one is the learner template which the students will see, it is identical to the solution template except some of the variable declarations has been omitted.
 
+<details><summary>Click me to see the Learner template</summary>
+<p>
+  
 ```matlab
 %% Learner template
 % Circle
@@ -203,8 +220,16 @@ s = 2.62;  % Distance height
 % Note that vf = 0 
 vi = 'Fill in answer here';
 ```
+
+</p>
+</details>
+
 Using the test generator with the two aforementioned scripts will produce the following output. 
 
+
+<details><summary>Click me to see the output</summary>
+<p>
+  
 ```matlab
 disp('Reference Solution: ')
 referenceVariables.a
@@ -330,10 +355,14 @@ disp('Student Solution: ')
 y
 assessVariableEqual('y',referenceVariables.y)
 ```
+
+</p>
+</details>
+
 Note that the output can be adjusted to suit your needs.
 Each of the tests can be pasted to Matlab Gader where it will perform a variable equals reference solution test.
 
-### Customizing Print
+### Customizing Print <a name="customizingprint"/></a>
 You can customize the output by entering  the 'Custom Print' tab and entering desired output.
 
 ![GUI_CUSTOM.png](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/blob/master/matlab-grader-test-generator.wiki/app_custom_print.png)
@@ -350,7 +379,7 @@ assessVariableEqual('areaCircle',referenceVariables.areaCircle)
 ---------- CUSTOMIZE HERE ----------
 ```
 
-## Contributions and License
+## Contributions and License <a name="contributionsandlicense"/></a>
 
-This application was developed by a student in the [Cyber-Physical Systems Laboratory](https://www.ntnu.no/blogger/cpslab/) at the [Norwegian University of Science and Technology](https://www.ntnu.no) in Ålesund, Norway, as part of an educational project funded by [Excited](https://www.ntnu.edu/excited), a Norwegian Centre for Excellent IT Education. Anyone is free to use this code as per the [MIT License](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/blob/master/LICENSE). 
+This application was developed by a student named [Sivert Løken](https://github.com/sivertl) in the [Cyber-Physical Systems Laboratory](https://www.ntnu.no/blogger/cpslab/) at the [Norwegian University of Science and Technology](https://www.ntnu.no) in Ålesund, Norway, as part of an educational project funded by [Excited](https://www.ntnu.edu/excited), a Norwegian Centre for Excellent IT Education. Anyone is free to use this code as per the [MIT License](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/blob/master/LICENSE). 
 
