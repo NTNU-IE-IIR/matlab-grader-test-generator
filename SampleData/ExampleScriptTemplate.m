@@ -22,9 +22,3 @@ b = 4;
 n = 10;
 m = 2;
 areaTrapezoid = 'enter answer here';
-
-%A kangaroo is capable of jumping to a height of 2.62 m. Determine the takeoff speed of the kangaroo.
-ay = -9.8;
-s = 2.62;
-%vf = vi^2 + 2*a*d;
-vi = 'enter answer here';
