@@ -1,4 +1,4 @@
-%% Solution Template
+%% Reference Solution
 % Circle
 r = 2;
 areaCircle = pi*r^2;
@@ -16,9 +16,3 @@ x = 6;
 y = 7;
 areaRectangle = x*y;
 circumferenceRectangle = (2*x)+(2*y);
-
-% Trapezoid
-b = 4;
-n = 10;
-m = 2;
-areaTrapezoid = ((a+b)/2)*m;

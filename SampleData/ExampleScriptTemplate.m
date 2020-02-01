@@ -1,4 +1,4 @@
-%% Learner template
+%% Learner Template
 % Circle
 r = 2;
 areaCircle = 'enter answer here';
@@ -16,9 +16,3 @@ x = 6;
 y = 7;
 areaRectangle = 'enter answer here';
 circumferenceRectangle ='enter answer here';
-
-%Trapezoid
-b = 4;
-n = 10;
-m = 2;
-areaTrapezoid = 'enter answer here';
