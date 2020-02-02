@@ -1,0 +1,42 @@
+disp('Reference Solution: ')
+referenceVariables.areaCircle
+disp('Student Solution: ')
+areaCircle
+assessVariableEqual('areaCircle',referenceVariables.areaCircle)
+
+
+disp('Reference Solution: ')
+referenceVariables.areaRectangle
+disp('Student Solution: ')
+areaRectangle
+assessVariableEqual('areaRectangle',referenceVariables.areaRectangle)
+
+
+disp('Reference Solution: ')
+referenceVariables.areaTriangle
+disp('Student Solution: ')
+areaTriangle
+assessVariableEqual('areaTriangle',referenceVariables.areaTriangle)
+
+
+disp('Reference Solution: ')
+referenceVariables.circumferenceCircle
+disp('Student Solution: ')
+circumferenceCircle
+assessVariableEqual('circumferenceCircle',referenceVariables.circumferenceCircle)
+
+
+disp('Reference Solution: ')
+referenceVariables.circumferenceRectangle
+disp('Student Solution: ')
+circumferenceRectangle
+assessVariableEqual('circumferenceRectangle',referenceVariables.circumferenceRectangle)
+
+
+disp('Reference Solution: ')
+referenceVariables.circumferenceTriangle
+disp('Student Solution: ')
+circumferenceTriangle
+assessVariableEqual('circumferenceTriangle',referenceVariables.circumferenceTriangle)
+
+
