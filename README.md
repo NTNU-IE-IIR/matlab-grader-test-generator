@@ -21,15 +21,10 @@ The application will open in a new window.
 ### Getting started
 
 Once the application has been opened, select a reference solution,
-
 and the learner template. 
-
 Select a path and enter a filename to save the output.
-
 If default test format is desired, click the "generate test".
-
 A .txt file will be generated at the chosen location.
-
 A sample test might look like this
 
 ```matlab
@@ -43,11 +38,8 @@ assessVariableEqual('SampleVariable',referenceVariables.SampleVariable)
 ### All-in-one script
 
 To autogenerate a sequence of tests for all variables contained inside a
-
 single Matlab Grader assessment test, copy and paste the code inside the
-
 script \Functions\all_in_one_.m to a Matlab Grader test window under
-
 the Matlab Code option.
 
 
