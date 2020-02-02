@@ -40,5 +40,17 @@ SampleVariable
 assessVariableEqual('SampleVariable',referenceVariables.SampleVariable)
 ```
 
+### All-in-one script
 
-For more information head over to the [wiki](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/wiki) 
+To autogenerate a sequence of tests for all variables contained inside a
+
+single Matlab Grader assessment test, copy and paste the code inside the
+
+script \Functions\all_in_one_.m to a Matlab Grader test window under
+
+the Matlab Code option.
+
+
+For more information head over to the [wiki](https://github.com/NTNU-IE-IIR/matlab-grader-test-generator/wiki)
+
+[![View Matlab Grader Test Generator on File Exchange](https://www.mathworks.com/matlabcentral/images/matlab-file-exchange.svg)](https://se.mathworks.com/matlabcentral/fileexchange/70661-matlab-grader-test-generator) 
